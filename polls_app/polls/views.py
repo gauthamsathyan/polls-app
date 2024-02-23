@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'templates/polls.html')
+    return render(request, 'polls.html')
 
