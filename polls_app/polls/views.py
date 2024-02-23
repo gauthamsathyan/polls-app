@@ -3,6 +3,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    #return HttpResponse("Hello, world. You're at the polls index.")
-    return render(request, 'polls.html')
+    return render(request, 'templates/polls.html')
 
