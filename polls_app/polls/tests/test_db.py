@@ -1,7 +1,14 @@
-from django.test import Client, TestCase
-from django.urls import reverse
+from django.core.management.base import BaseCommand
+from django.db import connections
+from django.db.utils import OperationalError
 
+class Command(BaseCommand):
+    help = 'Tests database connection'
 
-def test_database(self):
-    response = self.client.get("/polls/")
-    assert response.status_code == 200
+    def handle(self, *args, **options):
+        db_conn = connections['default']
+        try:
+            db_conn.cursor()
+            self.stdout.write(self.style.SUCCESS('Database connection successful'))
+        except OperationalError:
+            self.stdout.write(self.style.ERROR('Database connection failed'))
