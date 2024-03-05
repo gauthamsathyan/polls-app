@@ -17,9 +17,14 @@ This is a Django web application project. The core of this project is a 'Polls' 
 4. Run the Django server with `python manage.py runserver`.
 5. Open your web browser and visit `http://localhost:8000` to view the app.
 
+
 ### Running the Tests
 
 1. Navigate to the project directory.
 2. Run the tests with `pytest`.
+3. To test your application in the container run: `docker exec polls_app-django-1 python -m pytest`
+
+
+docker exec polls_app-django-1 python -m pytest
 
 Please note that these instructions assume that you have Python, Django, Docker, and Pytest installed on your machine. If you don't, please install them first.
