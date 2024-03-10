@@ -18,10 +18,11 @@ jobs:
       with:
         python-version: 3.8
     - name: Install Dependencies
+      working-directory: ./polls_app/
       run: |
         python -m pip install --upgrade pip
-        pip install --no-cache-dir -r polls_app/requirements.txt
+        pip install --no-cache-dir -r requirements.txt
     - name: Run Tests
-      working-directory: ./polls_app
+      working-directory: ./polls_app/polls
       run: |
         python manage.py test
