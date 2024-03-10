@@ -23,5 +23,6 @@ jobs:
         pip install -r polls_app/requirements.txt
         pip install --no-cache-dir -r polls_app/requirements.txt
     - name: Run Tests
+      working-directory: ./polls_app
       run: |
         python manage.py test
