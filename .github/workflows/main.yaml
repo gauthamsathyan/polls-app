@@ -26,4 +26,4 @@ jobs:
       working-directory: ./polls_app
       run: |
         pip install pytest pytest-cov
-        pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        pytest polls/tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
