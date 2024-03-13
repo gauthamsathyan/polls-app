@@ -25,4 +25,5 @@ jobs:
     - name: Run Tests
       working-directory: ./polls_app/polls
       run: |
-        python polls_app/manage.py test
+        pip install pytest pytest-cov
+        pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
