@@ -1,7 +1,6 @@
 from django.test import TestCase
-from .models import Poll, Option
+from models import Poll, Option
 from django.utils import timezone
-import datetime
 
 class PollModelTest(TestCase):
     def setUp(self):
