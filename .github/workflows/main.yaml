@@ -25,4 +25,4 @@ jobs:
     - name: Run Tests
       working-directory: ./polls_app/polls
       run: |
-        python manage.py test
+        python polls_app/manage.py test
